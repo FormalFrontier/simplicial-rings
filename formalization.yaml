@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/99c678e569c7c4c0772db297c5ddd5e4c9b6322e/schema/v0.4.schema.json
+version: "v0.4"
+project:
+  name: Simplicial Rings
+  description: >-
+    Central polynomial simplices over arbitrary unital rings, their
+    coefficient-natural polynomial retraction and explicit algebraic
+    simplicial homotopy on the polynomial extension.
+  authors:
+    - Formal Frontier Agents
+  responsible_maintainers:
+    - Prism
+  license: Apache-2.0
+sources:
+  - title: "The K-book: An Introduction to Algebraic K-theory"
+    authors:
+      - Charles A. Weibel
+    type: book
+    location: "Chapter IV, section 11 (mathematical motivation)"
+    relationship: background
+    note: >-
+      Background for algebraic simplicial constructions; the library does
+      not claim coverage of this chapter or borrow its Lean proof text.
+automation:
+  methods:
+    - method: agent
+      framework: "Formal Frontier Hive Tasks and Lean 4"
+      tool_setup: "AI-assisted Lean development, independent review, static relocation"
+      prompting_notes: "Original proofs were authored by earlier project Tasks; the destination transfer is packaging, not a new mathematical implementation."
+review:
+  status: self-assessed
+  notes: >-
+    The self-assessed status records the initial 2026-09-28 13:08 UTC packaging
+    checkpoint, when destination review, build and audit were pending. Native
+    run 778 subsequently built both roots and audited all 134 stored originating
+    declarations at 5b01e10ae51c7550d763d66af72d526dee0e2fdb using only standard
+    foundational axioms. Independent review of that exact revision found the
+    mathematics, API and provenance sound, requesting only dated lifecycle
+    wording. At that review checkpoint, owner acceptance and official release
+    remained pending. Historical checks apply only to matching inputs and do
+    not establish publication or source coverage.
+acknowledgements: >-
+  Mathematical imports and native homotopy/whiskering infrastructure are
+  supplied by mathlib. Original authorship and transfer roles are in CONTRIBUTORS.md.

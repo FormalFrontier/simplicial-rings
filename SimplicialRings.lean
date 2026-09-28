@@ -1,0 +1,4 @@
+module
+
+public import SimplicialRings.CentralPolynomialSimplex
+public import SimplicialRings.CentralPolynomialSimplex.Homotopy
