@@ -85,11 +85,9 @@ lake build SimplicialRingsTest.CentralPolynomialSimplex.Homotopy
 ```
 
 Both roots include these modules in the default build; the focused commands
-above are optional after cache preparation. Destination build and independent
-review were pending at the initial 2026-09-28 13:08 UTC packaging checkpoint.
-The later native run 778 and exact-revision independent review are recorded in
-the [verification history](../README.md#build-and-verification); neither by
-itself establishes owner acceptance or an official release. Original authorship
-and transplant provenance are credited in [CONTRIBUTORS.md](../CONTRIBUTORS.md).
-No geometric realization, K-theoretic comparison or source-coverage decision
-follows from the combinatorial algebraic homotopy alone.
+above are optional after cache preparation. See
+[build and verification](../README.md#build-and-verification) for
+revision-specific evidence and [contributors](../CONTRIBUTORS.md) for
+original authorship, transfer and independent-review roles. No geometric
+realization, K-theoretic comparison or source-coverage decision follows from
+the combinatorial algebraic homotopy alone.

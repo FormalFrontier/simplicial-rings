@@ -55,8 +55,9 @@ fibre partitions explicitly rather than assuming the simplicial laws.
   simplicial homotopy between that composite and the identity.
 
 All definitions and proofs are in a public Lean module; callers may import this
-producer directly rather than the import-all root `SimplicialRings`. A private,
-bare-import example client is `SimplicialRingsTest.CentralPolynomialSimplex`. It includes arbitrary-ring
+producer directly rather than the aggregate root `SimplicialRings`, which
+publicly imports both producers. A private, bare-import example client is
+`SimplicialRingsTest.CentralPolynomialSimplex`. It includes arbitrary-ring
 examples, the polynomial split, coefficient-map composition, the zero ring,
 and the degree-one faces `d₀(t₁)=1` and `d₁(t₁)=0` in degree zero.
 
@@ -85,11 +86,9 @@ lake env lean -DwarningAsError=true SimplicialRingsTest/CentralPolynomialSimplex
 ```
 
 Both roots include these modules in the default build; the focused commands
-above are optional after cache preparation. Destination build and independent
-review were pending at the initial 2026-09-28 13:08 UTC packaging checkpoint.
-The later native run 778 and exact-revision independent review are recorded in
-the [verification history](../README.md#build-and-verification); neither by
-itself establishes owner acceptance or an official release. The original author
-and transfer provenance are credited in [CONTRIBUTORS.md](../CONTRIBUTORS.md).
-Source-specific correspondence and coverage decisions remain outside this
-source-independent library.
+above are optional after cache preparation. See
+[build and verification](../README.md#build-and-verification) for
+revision-specific evidence and [contributors](../CONTRIBUTORS.md) for
+original authorship, transfer and independent-review roles. Source-specific
+correspondence and coverage decisions remain outside this source-independent
+library.

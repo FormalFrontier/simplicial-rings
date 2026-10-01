@@ -24,21 +24,17 @@ sources:
 automation:
   methods:
     - method: agent
-      framework: "Formal Frontier Hive Tasks and Lean 4"
-      tool_setup: "AI-assisted Lean development, independent review, static relocation"
-      prompting_notes: "Original proofs were authored by earlier project Tasks; the destination transfer is packaging, not a new mathematical implementation."
+      framework: "Formal Frontier agents using Lean 4"
+      tool_setup: "AI-assisted proof development and static library transfer"
+      prompting_notes: "Base and homotopy mathematics were authored separately; standalone packaging was not a new proof implementation."
 review:
   status: self-assessed
   notes: >-
-    The self-assessed status records the initial 2026-09-28 13:08 UTC packaging
-    checkpoint, when destination review, build and audit were pending. Native
-    run 778 subsequently built both roots and audited all 134 stored originating
-    declarations at 5b01e10ae51c7550d763d66af72d526dee0e2fdb using only standard
-    foundational axioms. Independent review of that exact revision found the
-    mathematics, API and provenance sound, requesting only dated lifecycle
-    wording. At that review checkpoint, owner acceptance and official release
-    remained pending. Historical checks apply only to matching inputs and do
-    not establish publication or source coverage.
+    Self-assessed describes this metadata assessment, not independent human
+    review. The first release received independent agent review and
+    revision-specific build and axiom checks; those checks do not certify
+    later changes or complete coverage of the background source.
 acknowledgements: >-
   Mathematical imports and native homotopy/whiskering infrastructure are
-  supplied by mathlib. Original authorship and transfer roles are in CONTRIBUTORS.md.
+  supplied by mathlib. Original authorship, transfer and independent agent
+  review roles are described in CONTRIBUTORS.md.
