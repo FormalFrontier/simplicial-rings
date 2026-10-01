@@ -357,7 +357,7 @@ theorem homotopyMap_degeneracy_after {n : ℕ} (i j : Fin (n + 1)) (hji : j ≤ 
     rw [homotopyMap_ordinal_generator, ordinal_homotopyMap_generator,
       ← SimplexCategory.σ_comp_σ hji]
 
-/-- The native seven-field simplicial homotopy from evaluation-then-inclusion to
+/-- The native simplicial homotopy, with its map family and seven identity laws, from evaluation-then-inclusion to
 the identity, valid over every unital ring. -/
 def contraction (A : RingCat.{u}) : CategoryTheory.SimplicialObject.Homotopy
     (evalAtZero A ≫ constantInclusion A)

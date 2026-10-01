@@ -43,7 +43,7 @@ independent generator. `homotopyCoefficient` uses mathlib's
 `homotopyMap` then uses stage-one `substitute` only for central degeneracy
 coordinate sums. Thus none of the arguments requires commutative coefficients.
 
-The native `SimplicialObject.Homotopy` has seven fields. Their ring-map
+The native `SimplicialObject.Homotopy` has a map family `h` and seven identity-law fields. The ring-map
 identities are available as `homotopyMap_face_zero`,
 `homotopyMap_face_last`, `homotopyMap_face_before`,
 `homotopyMap_face_middle`, `homotopyMap_face_after`,
