@@ -87,8 +87,5 @@ lake env lean -DwarningAsError=true SimplicialRingsTest/CentralPolynomialSimplex
 
 Both roots include these modules in the default build; the focused commands
 above are optional after cache preparation. See
-[build and verification](../README.md#build-and-verification) for
-revision-specific evidence and [contributors](../CONTRIBUTORS.md) for
-original authorship, transfer and independent-review roles. Source-specific
-correspondence and coverage decisions remain outside this source-independent
-library.
+[building](../README.md#building) for build
+instructions and [contributors](../CONTRIBUTORS.md) for contributor attribution.

@@ -1,6 +1,13 @@
 name = "simplicial-rings"
 version = "0.1.0"
+lintDriver = "batteries/runLinter"
 defaultTargets = ["SimplicialRings", "SimplicialRingsTest"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+weak.linter.style.header = false
 
 [[require]]
 name = "mathlib"
@@ -12,3 +19,7 @@ name = "SimplicialRings"
 
 [[lean_lib]]
 name = "SimplicialRingsTest"
+
+# Test modules contain anonymous private verification, not a public API.
+[lean_lib.leanOptions]
+weak.linter.privateModule = false

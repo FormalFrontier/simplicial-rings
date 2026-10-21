@@ -25,16 +25,9 @@ automation:
   methods:
     - method: agent
       framework: "Formal Frontier agents using Lean 4"
-      tool_setup: "AI-assisted proof development and static library transfer"
-      prompting_notes: "Base and homotopy mathematics were authored separately; standalone packaging was not a new proof implementation."
+      tool_setup: "AI-assisted proof development"
 review:
   status: self-assessed
-  notes: >-
-    Self-assessed describes this metadata assessment, not independent human
-    review. The first release received independent agent review and
-    revision-specific build and axiom checks; those checks do not certify
-    later changes or complete coverage of the background source.
 acknowledgements: >-
-  Mathematical imports and native homotopy/whiskering infrastructure are
-  supplied by mathlib. Original authorship, transfer and independent agent
-  review roles are described in CONTRIBUTORS.md.
+  Mathematical imports and homotopy/whiskering infrastructure are
+  supplied by mathlib. See CONTRIBUTORS.md for contributor attribution.

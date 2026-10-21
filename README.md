@@ -38,6 +38,22 @@ coordinate, degree, face, degeneracy and universe conventions.
 
 ## Use
 
+Add the published library to your `lakefile.toml`:
+
+```toml
+[[require]]
+name = "simplicial-rings"
+git = "https://github.com/FormalFrontier/simplicial-rings.git"
+rev = "79a68e78417cb591897f5d8cfdb56c81334e365e"
+```
+
+The example pins a published release by its full commit. To choose another
+release, use its full commit from the GitHub `main` release history. Lake records
+the selected commit in `lake-manifest.json`. Use compatible Lean and mathlib pins
+across your dependencies;
+this library's pins are in [`lean-toolchain`](lean-toolchain) and
+[`lake-manifest.json`](lake-manifest.json).
+
 Import `SimplicialRings.CentralPolynomialSimplex` for the basic construction, or
 `SimplicialRings.CentralPolynomialSimplex.Homotopy` for the contraction. The
 aggregate `SimplicialRings` exports both production modules but no test modules.
@@ -80,7 +96,7 @@ images commuting with coefficients. The construction does not include
 nonunital rings, geometric realization, GL/BGL, KV/KH comparisons or a claim
 of complete source formalization.
 
-## Build and verification
+## Building
 
 Use the pinned `lean-toolchain` (`leanprover/lean4:v4.34.0-rc2`) and the
 `lake-manifest.json`-resolved GitHub mathlib revision. Before **any** project
@@ -94,34 +110,10 @@ lake build SimplicialRings SimplicialRingsTest
 The two roots are default Lake targets, so `lake build` also builds both.
 Do not substitute a full mathlib source rebuild if cache fetching fails.
 
-The first release's verification built both roots and audited the transitive
-axioms of 134 originating declarations, including 25 private declarations and
-generated support declarations. Those declarations used only `propext`, `Classical.choice` and
-`Quot.sound`, or no axioms. The roots and anonymous-example clients were built;
-they introduced no stored declarations of their own. This is historical
-exact-input evidence, not a build or audit of every later revision. Review,
-acceptance and release of changed candidates remain separate decisions.
-
-### Expected build cost
-
-As a historical reference, the September 28, 2026 observation used the first
-release's pinned Lean, mathlib, library and test inputs, with documentation-only
-differences from the earlier verification. On a configured Linux x86-64 runner
-(8 CPUs, a 24 GiB memory budget, `LEAN_NUM_THREADS=2` for Lean runtime
-threads, not an aggregate Lake process or memory limit), fetching the
-mathlib cache took about 42.9 seconds, its offline no-build readiness check
-6.0 seconds, and the
-subsequent `lake build SimplicialRings SimplicialRingsTest` 8.1 seconds
-(1,442 Lake jobs, including already-cached dependency targets). The six
-per-module transitive axiom checks took about 36.3 seconds in total; the
-whole CI job took about 136 seconds, including setup and evidence collection.
-These are observed elapsed times for those historical inputs, not a timing of
-later revisions, a cold mathlib source-build benchmark, a minimum requirement,
-a speedup claim or a performance guarantee. Network and machine differences can
-dominate. Peak memory was not measured: 24 GiB is the runner's configured
-budget, not measured usage or a claim that smaller machines fail.
+Build time and memory use depend on the machine, network and cached state; no
+fixed runtime or minimum memory requirement is claimed.
 
 Code and docs are licensed under [Apache-2.0](LICENSE). See
 [contributors and provenance](CONTRIBUTORS.md) for original Formal Frontier
-authorship, the distinguished transfer and independent review roles, and the
-relationship to mathematical background sources.
+authorship, mathematical and software contributions, and the relationship to
+mathematical background sources.

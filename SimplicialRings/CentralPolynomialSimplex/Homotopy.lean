@@ -209,12 +209,12 @@ theorem ordinal_homotopyMap_generator (n : ℕ) (i : Fin (n + 1))
             homotopyMap_coordinate, ordinalMap_coordinate]
     _ = _ := ordinalMap_fiberValue (SimplexCategory.σ i) alpha j.succ
 
-@[simp] theorem homotopyMap_C (n : ℕ) (i : Fin (n + 1)) (r : R) :
+theorem homotopyMap_C (n : ℕ) (i : Fin (n + 1)) (r : R) :
     homotopyMap n i (coefficient n (Polynomial.C r)) =
       coefficient (R := Polynomial R) (n + 1) (Polynomial.C r) := by
   simp
 
-@[simp] theorem homotopyMap_X (n : ℕ) (i : Fin (n + 1)) :
+theorem homotopyMap_X (n : ℕ) (i : Fin (n + 1)) :
     homotopyMap (R := R) n i (coefficient n Polynomial.X) =
       coefficient (R := Polynomial R) (n + 1) Polynomial.X *
         tail (R := Polynomial R) (n + 1) (i.val + 1) := by
@@ -357,8 +357,8 @@ theorem homotopyMap_degeneracy_after {n : ℕ} (i j : Fin (n + 1)) (hji : j ≤ 
     rw [homotopyMap_ordinal_generator, ordinal_homotopyMap_generator,
       ← SimplexCategory.σ_comp_σ hji]
 
-/-- The native simplicial homotopy, with its map family and seven identity laws, from evaluation-then-inclusion to
-the identity, valid over every unital ring. -/
+/-- The simplicial homotopy, with its map family and seven identity laws, from
+evaluation-then-inclusion to the identity, valid over every unital ring. -/
 def contraction (A : RingCat.{u}) : CategoryTheory.SimplicialObject.Homotopy
     (evalAtZero A ≫ constantInclusion A)
     (𝟙 (simplex (polynomialFunctor.obj A))) where

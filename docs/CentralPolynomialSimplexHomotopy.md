@@ -86,8 +86,7 @@ lake build SimplicialRingsTest.CentralPolynomialSimplex.Homotopy
 
 Both roots include these modules in the default build; the focused commands
 above are optional after cache preparation. See
-[build and verification](../README.md#build-and-verification) for
-revision-specific evidence and [contributors](../CONTRIBUTORS.md) for
-original authorship, transfer and independent-review roles. No geometric
-realization, K-theoretic comparison or source-coverage decision follows from
+[building](../README.md#building) for build
+instructions and [contributors](../CONTRIBUTORS.md) for contributor attribution.
+No geometric realization or K-theoretic comparison follows from
 the combinatorial algebraic homotopy alone.
